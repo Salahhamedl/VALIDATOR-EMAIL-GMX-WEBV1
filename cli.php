@@ -44,6 +44,10 @@ if ($reqemail > 15) {
     echo PHP_EOL . PHP_EOL . "$WH [$YL!$WH] $RD MAX 15$WH [$YL!$WH]$DEF" . PHP_EOL . PHP_EOL;
     goto reqemail;
 }
+if ($reqemail < 5) {
+    echo PHP_EOL . PHP_EOL . "$WH [$YL!$WH] $RD MIN 5$WH [$YL!$WH]$DEF" . PHP_EOL . PHP_EOL;
+    goto reqemail;
+}
 
 //=========> COUNT
 
@@ -222,3 +226,4 @@ function multiexplode($delimiters, $string)
 
 
 ?>
+
