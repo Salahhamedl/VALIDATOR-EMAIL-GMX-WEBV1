@@ -3,7 +3,7 @@
 // DONT CHANGE THIS
 /*==========> INFO 
  * CODE     : BY ZLAXTERT
- * SCRIPT   : VALIDATOR WEB.DE AND GMX.DE
+ * SCRIPT   : VALIDATOR WEB AND GMX
  * VERSION  : V1
  * TELEGRAM : t.me/zlaxtert
  * BY       : DARKXCODE
@@ -219,5 +219,6 @@ function multiexplode($delimiters, $string)
     $two = explode($delimiters[0], $one);
     return $two;
 }
+
 
 ?>
