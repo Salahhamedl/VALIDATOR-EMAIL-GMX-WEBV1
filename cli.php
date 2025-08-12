@@ -128,14 +128,14 @@ $rollingCurl->setCallback(function (\RollingCurl\Request $request, \RollingCurl\
 
         $live++;
         save_file("result/live.txt", "$email");
-        echo "[$RD$no$DEF/$GR$total$DEF][$CY$jam$DEF]$GR LIVE$DEF =>$BL $email$DEF | [$YL RESULT$DEF: $WH$email_status$DEF ] [$YL MSG$DEF: $WH$message$DEF ] | BY$CY DARKXCODE$DEF (V1)" . PHP_EOL;
+        echo "[$RD$no$DEF/$GR$total$DEF][$CY$jam$DEF]$GR LIVE$DEF =>$BL $email$DEF | [$YL RESULT$DEF: $WH".strtoupper($email_status)."$DEF ] [$YL MSG$DEF: $WH".strtoupper($message)."$DEF ] | BY$CY DARKXCODE$DEF (V1)" . PHP_EOL;
 
     } else if (strpos($x, '"email_status":"unknown"')) {
 
 
         $chkAG++;
         save_file("result/checkAgain.txt", "$list");
-        echo "[$RD$no$DEF/$GR$total$DEF][$CY$jam$DEF]$RD DIE$DEF =>$BL $list$DEF | [$YL RESULT$DEF:$MG unknown$DEF ] | BY$CY DARKXCODE$DEF (V1)" . PHP_EOL;
+        echo "[$RD$no$DEF/$GR$total$DEF][$CY$jam$DEF]$RD DIE$DEF =>$BL $list$DEF | [$YL RESULT$DEF:$MG UNKNOWN$DEF ] | BY$CY DARKXCODE$DEF (V1)" . PHP_EOL;
             
 
     } else if (strpos($x, '"status":"failed"')) {
@@ -149,7 +149,7 @@ $rollingCurl->setCallback(function (\RollingCurl\Request $request, \RollingCurl\
                 
         $die++;
         save_file("result/die.txt", "$email");
-        echo "[$RD$no$DEF/$GR$total$DEF][$CY$jam$DEF]$RD DIE$DEF =>$BL $email$DEF | [$YL RESULT$DEF: $MG$email_status$DEF ] | BY$CY DARKXCODE$DEF (V1)" . PHP_EOL;
+        echo "[$RD$no$DEF/$GR$total$DEF][$CY$jam$DEF]$RD DIE$DEF =>$BL $email$DEF | [$YL RESULT$DEF: $MG".strtoupper($email_status)."$DEF ] | BY$CY DARKXCODE$DEF (V1)" . PHP_EOL;
             
 
     } else if (strpos($x, '"msg":"Incorrect APIkey!"')) {
@@ -226,4 +226,5 @@ function multiexplode($delimiters, $string)
 
 
 ?>
+
 
